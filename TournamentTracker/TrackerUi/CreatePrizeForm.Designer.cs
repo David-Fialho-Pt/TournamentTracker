@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePrizeForm));
-            teamonescoretb = new TextBox();
+            placenumberlbl = new TextBox();
             plcnumberlbl = new Label();
-            textBox1 = new TextBox();
+            placenamelbl = new TextBox();
             plcnamelbl = new Label();
-            textBox2 = new TextBox();
+            placeamountlbl = new TextBox();
             plcamountlbl = new Label();
-            textBox3 = new TextBox();
+            prizepercentlbl = new TextBox();
             prizepercentagelbl = new Label();
             label4 = new Label();
             createprizelbl = new Label();
             createprizebtn = new Button();
             SuspendLayout();
             // 
-            // teamonescoretb
+            // placenumberlbl
             // 
-            teamonescoretb.BorderStyle = BorderStyle.FixedSingle;
-            teamonescoretb.Location = new Point(292, 90);
-            teamonescoretb.Name = "teamonescoretb";
-            teamonescoretb.Size = new Size(100, 35);
-            teamonescoretb.TabIndex = 12;
+            placenumberlbl.BorderStyle = BorderStyle.FixedSingle;
+            placenumberlbl.Location = new Point(292, 90);
+            placenumberlbl.Name = "placenumberlbl";
+            placenumberlbl.Size = new Size(100, 35);
+            placenumberlbl.TabIndex = 12;
             // 
             // plcnumberlbl
             // 
@@ -61,13 +61,13 @@
             plcnumberlbl.TabIndex = 11;
             plcnumberlbl.Text = "Place Number";
             // 
-            // textBox1
+            // placenamelbl
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(292, 152);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 35);
-            textBox1.TabIndex = 14;
+            placenamelbl.BorderStyle = BorderStyle.FixedSingle;
+            placenamelbl.Location = new Point(292, 152);
+            placenamelbl.Name = "placenamelbl";
+            placenamelbl.Size = new Size(100, 35);
+            placenamelbl.TabIndex = 14;
             // 
             // plcnamelbl
             // 
@@ -80,13 +80,14 @@
             plcnamelbl.TabIndex = 13;
             plcnamelbl.Text = "Place Name";
             // 
-            // textBox2
+            // placeamountlbl
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(292, 212);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 35);
-            textBox2.TabIndex = 16;
+            placeamountlbl.BorderStyle = BorderStyle.FixedSingle;
+            placeamountlbl.Location = new Point(292, 212);
+            placeamountlbl.Name = "placeamountlbl";
+            placeamountlbl.Size = new Size(100, 35);
+            placeamountlbl.TabIndex = 16;
+            placeamountlbl.Text = "0";
             // 
             // plcamountlbl
             // 
@@ -99,13 +100,14 @@
             plcamountlbl.TabIndex = 15;
             plcamountlbl.Text = "Place Amount";
             // 
-            // textBox3
+            // prizepercentlbl
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(292, 368);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 35);
-            textBox3.TabIndex = 18;
+            prizepercentlbl.BorderStyle = BorderStyle.FixedSingle;
+            prizepercentlbl.Location = new Point(292, 368);
+            prizepercentlbl.Name = "prizepercentlbl";
+            prizepercentlbl.Size = new Size(100, 35);
+            prizepercentlbl.TabIndex = 18;
+            prizepercentlbl.Text = "0";
             // 
             // prizepercentagelbl
             // 
@@ -154,6 +156,7 @@
             createprizebtn.TabIndex = 21;
             createprizebtn.Text = "Create Prize";
             createprizebtn.UseVisualStyleBackColor = true;
+            createprizebtn.Click += createprizebtn_Click;
             // 
             // CreatePrizeForm
             // 
@@ -164,13 +167,13 @@
             Controls.Add(createprizebtn);
             Controls.Add(createprizelbl);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(prizepercentlbl);
             Controls.Add(prizepercentagelbl);
-            Controls.Add(textBox2);
+            Controls.Add(placeamountlbl);
             Controls.Add(plcamountlbl);
-            Controls.Add(textBox1);
+            Controls.Add(placenamelbl);
             Controls.Add(plcnamelbl);
-            Controls.Add(teamonescoretb);
+            Controls.Add(placenumberlbl);
             Controls.Add(plcnumberlbl);
             Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = Color.DodgerBlue;
@@ -184,13 +187,13 @@
 
         #endregion
 
-        private TextBox teamonescoretb;
+        private TextBox placenumberlbl;
         private Label plcnumberlbl;
-        private TextBox textBox1;
+        private TextBox placenamelbl;
         private Label plcnamelbl;
-        private TextBox textBox2;
+        private TextBox placeamountlbl;
         private Label plcamountlbl;
-        private TextBox textBox3;
+        private TextBox prizepercentlbl;
         private Label prizepercentagelbl;
         private Label label4;
         private Label createprizelbl;

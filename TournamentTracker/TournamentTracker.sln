@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentTracker", "TournamentTracker\TournamentTracker.csproj", "{9A197B5A-C1E3-46D9-9465-81B4B3E77E73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerLibrary", "TournamentTracker\TrackerLibrary.csproj", "{9A197B5A-C1E3-46D9-9465-81B4B3E77E73}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerUi", "TrackerUi\TrackerUi.csproj", "{31743C91-29E6-4D77-BAD4-69B7AB084580}"
 EndProject

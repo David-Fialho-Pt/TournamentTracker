@@ -15,6 +15,6 @@ namespace TournamentTracker
 
         public List<PrizeModel> Prizes { get; set; } = new List<PrizeModel>();
 
-        public List<List<MatchupModel>> { get; set; } = new List<List<MatchupModel>>();
+        public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
 }
 }

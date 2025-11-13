@@ -18,4 +18,8 @@
     <EmbeddedResource Remove="Form1.resx" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TournamentTracker\TrackerLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
