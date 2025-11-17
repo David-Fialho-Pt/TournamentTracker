@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TournamentTracker
+namespace TrackerLibrary
 {
-    public interface IDataConnection
+    public enum DatabaseType
     {
-        PrizeModel CreatePrize(PrizeModel model);
-      
+        Sql,
+        TextFile
+
     }
 }

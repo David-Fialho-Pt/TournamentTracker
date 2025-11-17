@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TournamentTracker;
+using TrackerLibrary.DataAcess;
+using TrackerLibrary.Models;
 
 namespace TrackerrUi
 {
@@ -26,10 +28,7 @@ namespace TrackerrUi
                                                   placenamelbl.Text,
                                                   placeamountlbl.Text,
                                                   prizepercentlbl.Text);
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreatePrize(model);
-                }
+                GlobalConfig.Connection.CreatePrize(model);
                 placenumberlbl.Text = "";
                 placenamelbl.Text = "";
                 placeamountlbl.Text = "0";

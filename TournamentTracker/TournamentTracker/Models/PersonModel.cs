@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TournamentTracker
+namespace TrackerLibrary.Models
 {
     public class PersonModel
     {
