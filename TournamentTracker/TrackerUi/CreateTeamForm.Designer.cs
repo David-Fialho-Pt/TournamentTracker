@@ -40,7 +40,7 @@
             celphonelbl = new Label();
             emailvalue = new TextBox();
             emaillbl = new Label();
-            lastnamelbl = new TextBox();
+            lastnamevalue = new TextBox();
             Lastnamelabel = new Label();
             firstnamevalue = new TextBox();
             firstnamelabel = new Label();
@@ -128,7 +128,7 @@
             addnewmembergp.Controls.Add(celphonelbl);
             addnewmembergp.Controls.Add(emailvalue);
             addnewmembergp.Controls.Add(emaillbl);
-            addnewmembergp.Controls.Add(lastnamelbl);
+            addnewmembergp.Controls.Add(lastnamevalue);
             addnewmembergp.Controls.Add(Lastnamelabel);
             addnewmembergp.Controls.Add(firstnamevalue);
             addnewmembergp.Controls.Add(firstnamelabel);
@@ -155,6 +155,7 @@
             creatememberbtn.TabIndex = 21;
             creatememberbtn.Text = "Create Member";
             creatememberbtn.UseVisualStyleBackColor = true;
+            creatememberbtn.Click += creatememberbtn_Click;
             // 
             // cellphonevalue
             // 
@@ -194,13 +195,13 @@
             emaillbl.TabIndex = 15;
             emaillbl.Text = "Email";
             // 
-            // lastnamelbl
+            // lastnamevalue
             // 
-            lastnamelbl.BorderStyle = BorderStyle.FixedSingle;
-            lastnamelbl.Location = new Point(161, 104);
-            lastnamelbl.Name = "lastnamelbl";
-            lastnamelbl.Size = new Size(180, 43);
-            lastnamelbl.TabIndex = 14;
+            lastnamevalue.BorderStyle = BorderStyle.FixedSingle;
+            lastnamevalue.Location = new Point(161, 104);
+            lastnamevalue.Name = "lastnamevalue";
+            lastnamevalue.Size = new Size(180, 43);
+            lastnamevalue.TabIndex = 14;
             // 
             // Lastnamelabel
             // 
@@ -339,7 +340,7 @@
         private Label celphonelbl;
         private TextBox emailvalue;
         private Label emaillbl;
-        private TextBox lastnamelbl;
+        private TextBox lastnamevalue;
         private Label Lastnamelabel;
         private TextBox firstnamevalue;
         private Label firstnamelabel;

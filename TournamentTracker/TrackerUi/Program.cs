@@ -16,7 +16,7 @@ namespace TrackerrUi
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             TournamentTracker.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
-            Application.Run(new CreatePrizeForm());
+            Application.Run(new CreateTeamForm());
         }
     }
 }
