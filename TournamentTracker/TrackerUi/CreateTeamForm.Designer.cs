@@ -48,8 +48,8 @@
             selectteamlabel = new Label();
             teamnamelabel = new Label();
             label1 = new Label();
-            selecteamdropdown = new ComboBox();
             selectteammemberdropdown = new ComboBox();
+            teamnamevalue = new TextBox();
             addnewmembergp.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,6 +95,7 @@
             createteambtn.TabIndex = 47;
             createteambtn.Text = "Create Team";
             createteambtn.UseVisualStyleBackColor = true;
+            createteambtn.Click += createteambtn_Click;
             // 
             // deleteselectedmemberbtn
             // 
@@ -283,14 +284,6 @@
             label1.TabIndex = 38;
             label1.Text = "Create Team";
             // 
-            // selecteamdropdown
-            // 
-            selecteamdropdown.FormattingEnabled = true;
-            selecteamdropdown.Location = new Point(56, 175);
-            selecteamdropdown.Name = "selecteamdropdown";
-            selecteamdropdown.Size = new Size(310, 38);
-            selecteamdropdown.TabIndex = 48;
-            // 
             // selectteammemberdropdown
             // 
             selectteammemberdropdown.FormattingEnabled = true;
@@ -299,14 +292,21 @@
             selectteammemberdropdown.Size = new Size(310, 38);
             selectteammemberdropdown.TabIndex = 49;
             // 
+            // teamnamevalue
+            // 
+            teamnamevalue.Location = new Point(55, 174);
+            teamnamevalue.Name = "teamnamevalue";
+            teamnamevalue.Size = new Size(311, 35);
+            teamnamevalue.TabIndex = 50;
+            // 
             // CreateTeamForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1108, 890);
+            Controls.Add(teamnamevalue);
             Controls.Add(selectteammemberdropdown);
-            Controls.Add(selecteamdropdown);
             Controls.Add(createteambtn);
             Controls.Add(deleteselectedmemberbtn);
             Controls.Add(teammemberslistbox);
@@ -350,7 +350,7 @@
         private Label selectteamlabel;
         private Label teamnamelabel;
         private Label label1;
-        private ComboBox selecteamdropdown;
         private ComboBox selectteammemberdropdown;
+        private TextBox teamnamevalue;
     }
 }

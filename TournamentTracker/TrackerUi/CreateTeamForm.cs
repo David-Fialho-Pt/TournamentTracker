@@ -111,5 +111,15 @@ namespace TrackerrUi
 
             }
         }
+
+        private void createteambtn_Click(object sender, EventArgs e)
+        {
+            TeamModel t = new TeamModel();
+            t.TeamName = teamnamevalue .Text;
+            t.TeamMembers = selectedTeamMembers;
+
+            GlobalConfig.Connection.CreateTeam(t);  
+
+        }
     }
 }
