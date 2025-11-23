@@ -44,12 +44,12 @@
             Lastnamelabel = new Label();
             firstnamevalue = new TextBox();
             firstnamelabel = new Label();
-            memberbutton = new Button();
-            selectteammemberdropdown = new TextBox();
+            addmemberbutton = new Button();
             selectteamlabel = new Label();
-            teamnamedropbox = new TextBox();
             teamnamelabel = new Label();
             label1 = new Label();
+            selecteamdropdown = new ComboBox();
+            selectteammemberdropdown = new ComboBox();
             addnewmembergp.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,6 +110,7 @@
             deleteselectedmemberbtn.TabIndex = 46;
             deleteselectedmemberbtn.Text = "Delete Selected";
             deleteselectedmemberbtn.UseVisualStyleBackColor = true;
+            deleteselectedmemberbtn.Click += deleteselectedmemberbtn_Click;
             // 
             // teammemberslistbox
             // 
@@ -233,28 +234,21 @@
             firstnamelabel.TabIndex = 11;
             firstnamelabel.Text = "First Name";
             // 
-            // memberbutton
+            // addmemberbutton
             // 
-            memberbutton.FlatAppearance.BorderColor = Color.Silver;
-            memberbutton.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            memberbutton.FlatAppearance.MouseOverBackColor = Color.LightGray;
-            memberbutton.FlatStyle = FlatStyle.Flat;
-            memberbutton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            memberbutton.ForeColor = Color.DodgerBlue;
-            memberbutton.Location = new Point(161, 364);
-            memberbutton.Name = "memberbutton";
-            memberbutton.Size = new Size(192, 49);
-            memberbutton.TabIndex = 43;
-            memberbutton.Text = "Add Member";
-            memberbutton.UseVisualStyleBackColor = true;
-            // 
-            // selectteammemberdropdown
-            // 
-            selectteammemberdropdown.BorderStyle = BorderStyle.FixedSingle;
-            selectteammemberdropdown.Location = new Point(55, 296);
-            selectteammemberdropdown.Name = "selectteammemberdropdown";
-            selectteammemberdropdown.Size = new Size(418, 35);
-            selectteammemberdropdown.TabIndex = 42;
+            addmemberbutton.FlatAppearance.BorderColor = Color.Silver;
+            addmemberbutton.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            addmemberbutton.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            addmemberbutton.FlatStyle = FlatStyle.Flat;
+            addmemberbutton.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addmemberbutton.ForeColor = Color.DodgerBlue;
+            addmemberbutton.Location = new Point(161, 364);
+            addmemberbutton.Name = "addmemberbutton";
+            addmemberbutton.Size = new Size(192, 49);
+            addmemberbutton.TabIndex = 43;
+            addmemberbutton.Text = "Add Member";
+            addmemberbutton.UseVisualStyleBackColor = true;
+            addmemberbutton.Click += addmemberbutton_Click;
             // 
             // selectteamlabel
             // 
@@ -266,14 +260,6 @@
             selectteamlabel.Size = new Size(263, 37);
             selectteamlabel.TabIndex = 41;
             selectteamlabel.Text = "Select Team Member";
-            // 
-            // teamnamedropbox
-            // 
-            teamnamedropbox.BorderStyle = BorderStyle.FixedSingle;
-            teamnamedropbox.Location = new Point(55, 175);
-            teamnamedropbox.Name = "teamnamedropbox";
-            teamnamedropbox.Size = new Size(418, 35);
-            teamnamedropbox.TabIndex = 40;
             // 
             // teamnamelabel
             // 
@@ -297,20 +283,36 @@
             label1.TabIndex = 38;
             label1.Text = "Create Team";
             // 
+            // selecteamdropdown
+            // 
+            selecteamdropdown.FormattingEnabled = true;
+            selecteamdropdown.Location = new Point(56, 175);
+            selecteamdropdown.Name = "selecteamdropdown";
+            selecteamdropdown.Size = new Size(310, 38);
+            selecteamdropdown.TabIndex = 48;
+            // 
+            // selectteammemberdropdown
+            // 
+            selectteammemberdropdown.FormattingEnabled = true;
+            selectteammemberdropdown.Location = new Point(56, 283);
+            selectteammemberdropdown.Name = "selectteammemberdropdown";
+            selectteammemberdropdown.Size = new Size(310, 38);
+            selectteammemberdropdown.TabIndex = 49;
+            // 
             // CreateTeamForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1108, 890);
+            Controls.Add(selectteammemberdropdown);
+            Controls.Add(selecteamdropdown);
             Controls.Add(createteambtn);
             Controls.Add(deleteselectedmemberbtn);
             Controls.Add(teammemberslistbox);
             Controls.Add(addnewmembergp);
-            Controls.Add(memberbutton);
-            Controls.Add(selectteammemberdropdown);
+            Controls.Add(addmemberbutton);
             Controls.Add(selectteamlabel);
-            Controls.Add(teamnamedropbox);
             Controls.Add(teamnamelabel);
             Controls.Add(label1);
             Controls.Add(creasteteambtn);
@@ -344,11 +346,11 @@
         private Label Lastnamelabel;
         private TextBox firstnamevalue;
         private Label firstnamelabel;
-        private Button memberbutton;
-        private TextBox selectteammemberdropdown;
+        private Button addmemberbutton;
         private Label selectteamlabel;
-        private TextBox teamnamedropbox;
         private Label teamnamelabel;
         private Label label1;
+        private ComboBox selecteamdropdown;
+        private ComboBox selectteammemberdropdown;
     }
 }
