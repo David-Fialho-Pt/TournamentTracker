@@ -102,5 +102,25 @@ namespace TrackerrUi
                 WireUpLists();
             }
         }
+
+        private void createtournamentbutton_Click(object sender, EventArgs e)
+        {
+            decimal fee = 0;
+            bool feeAcceptable = decimal.TryParse(entryfee.Text, out fee);
+            if (!feeAcceptable)
+            {
+                MessageBox.Show("You need to enter a valid Entry Fee.", "Invalid Fee",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            TournamentModel tm = new TournamentModel();
+            tm.TournamentName = tournamentnamevalue.Text;
+            tm.EntryFee = fee;
+            tm.Prizes = selectedPrizes;
+            tm.EnteredTeams = selectedTeams;
+            GlobalConfig.Connection.CreateTournament(tm);
+
+
+        }
     }
 }

@@ -43,7 +43,7 @@
             selecteamlabel = new Label();
             entryfee = new TextBox();
             entryfeelabel = new Label();
-            tournamentnamedropbox = new TextBox();
+            tournamentnamevalue = new TextBox();
             tournamentnamelabel = new Label();
             createtournamentlabel = new Label();
             SuspendLayout();
@@ -62,6 +62,7 @@
             createtournamentbutton.TabIndex = 43;
             createtournamentbutton.Text = "Create Tournament";
             createtournamentbutton.UseVisualStyleBackColor = true;
+            createtournamentbutton.Click += createtournamentbutton_Click;
             // 
             // RemoveSelectedPrize
             // 
@@ -219,13 +220,13 @@
             entryfeelabel.TabIndex = 30;
             entryfeelabel.Text = "Entry Fee";
             // 
-            // tournamentnamedropbox
+            // tournamentnamevalue
             // 
-            tournamentnamedropbox.BorderStyle = BorderStyle.FixedSingle;
-            tournamentnamedropbox.Location = new Point(50, 191);
-            tournamentnamedropbox.Name = "tournamentnamedropbox";
-            tournamentnamedropbox.Size = new Size(298, 35);
-            tournamentnamedropbox.TabIndex = 29;
+            tournamentnamevalue.BorderStyle = BorderStyle.FixedSingle;
+            tournamentnamevalue.Location = new Point(50, 191);
+            tournamentnamevalue.Name = "tournamentnamevalue";
+            tournamentnamevalue.Size = new Size(298, 35);
+            tournamentnamevalue.TabIndex = 29;
             // 
             // tournamentnamelabel
             // 
@@ -269,7 +270,7 @@
             Controls.Add(selecteamlabel);
             Controls.Add(entryfee);
             Controls.Add(entryfeelabel);
-            Controls.Add(tournamentnamedropbox);
+            Controls.Add(tournamentnamevalue);
             Controls.Add(tournamentnamelabel);
             Controls.Add(createtournamentlabel);
             Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -298,7 +299,7 @@
         private Label selecteamlabel;
         private TextBox entryfee;
         private Label entryfeelabel;
-        private TextBox tournamentnamedropbox;
+        private TextBox tournamentnamevalue;
         private Label tournamentnamelabel;
         private Label createtournamentlabel;
     }
