@@ -13,7 +13,7 @@ using TrackerLibrary;
 
 namespace TrackerrUi
 {
-    public partial class CreateTournamentForm : Form
+    public partial class CreateTournamentForm : Form, IPrizeRequester, ITeamRequester
     {
         List<TeamModel> availableTeams = GlobalConfig.Connection.GetTeam_All();
         List<TeamModel> selectedTeams = new List<TeamModel>();
@@ -44,14 +44,62 @@ namespace TrackerrUi
 
         private void addteambutton_Click(object sender, EventArgs e)
         {
-           
-          TeamModel t = (TeamModel)selectTeamDropdown.SelectedItem; 
-           if (t != null)
+
+            TeamModel t = (TeamModel)selectTeamDropdown.SelectedItem;
+            if (t != null)
             {
                 availableTeams.Remove(t);
                 selectedTeams.Add(t);
                 WireUpLists();
-                
+
+            }
+        }
+
+        private void createprizebutton_Click(object sender, EventArgs e)
+        {
+            CreatePrizeForm frm = new CreatePrizeForm(this);
+            frm.Show();
+
+        }
+
+        public void PrizeComplete(PrizeModel model)
+        {
+
+            selectedPrizes.Add(model);
+            WireUpLists();
+        }
+
+        public void TeamComplete(TeamModel model)
+        {
+            selectedTeams.Add(model);
+            WireUpLists();
+
+        }
+
+        private void createnewteamlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateTeamForm frm = new CreateTeamForm(this);
+            frm.Show();
+        }
+
+        private void removeSelectedTeams_Click(object sender, EventArgs e)
+        {
+            TeamModel t = (TeamModel)tournamentteamslistbox.SelectedItem;
+            if (t != null)
+            {
+                selectedTeams.Remove(t);
+                availableTeams.Add(t);
+                WireUpLists();
+            }
+        }
+
+        private void RemoveSelectedPrize_Click(object sender, EventArgs e)
+        {
+            PrizeModel p = (PrizeModel)prizeslistbox.SelectedItem;
+            if (p != null)
+            {
+                selectedPrizes.Remove(p);
+                WireUpLists();
             }
         }
     }
