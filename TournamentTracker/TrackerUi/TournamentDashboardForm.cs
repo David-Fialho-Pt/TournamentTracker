@@ -7,14 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TournamentTracker;
+using TrackerLibrary.Models;
 
 namespace TrackerrUi
 {
     public partial class TournamentDashboardForm : Form
     {
+        List<TournamentModel> tournaments = GlobalConfig.Connection.GetTournament_All();
         public TournamentDashboardForm()
         {
             InitializeComponent();
+            WireUpLists();
+        }
+        private void WireUpLists()
+        {
+            loadexistingtounamentsdropdown.DataSource = tournaments;
+
+            loadexistingtounamentsdropdown.DisplayMember = "TournamentName";
+        }
+
+        private void createtournamentbtn_Click(object sender, EventArgs e)
+        {
+            CreateTournamentForm frm = new CreateTournamentForm();
+            frm.Show();
         }
     }
 }

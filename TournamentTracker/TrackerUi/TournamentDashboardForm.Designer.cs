@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TournamentDashboardForm));
             createtournamentbtn = new Button();
             loadtournamentbtn = new Button();
-            loadexistingtournamentdropdown = new TextBox();
             loadexistingtournamenlbl = new Label();
             dashboardlbl = new Label();
+            loadexistingtounamentsdropdown = new ComboBox();
             SuspendLayout();
             // 
             // createtournamentbtn
@@ -50,6 +50,7 @@
             createtournamentbtn.TabIndex = 33;
             createtournamentbtn.Text = "Create Tournament";
             createtournamentbtn.UseVisualStyleBackColor = true;
+            createtournamentbtn.Click += createtournamentbtn_Click;
             // 
             // loadtournamentbtn
             // 
@@ -65,14 +66,6 @@
             loadtournamentbtn.TabIndex = 32;
             loadtournamentbtn.Text = "Load Tournament";
             loadtournamentbtn.UseVisualStyleBackColor = true;
-            // 
-            // loadexistingtournamentdropdown
-            // 
-            loadexistingtournamentdropdown.BorderStyle = BorderStyle.FixedSingle;
-            loadexistingtournamentdropdown.Location = new Point(42, 167);
-            loadexistingtournamentdropdown.Name = "loadexistingtournamentdropdown";
-            loadexistingtournamentdropdown.Size = new Size(418, 35);
-            loadexistingtournamentdropdown.TabIndex = 31;
             // 
             // loadexistingtournamenlbl
             // 
@@ -96,15 +89,23 @@
             dashboardlbl.TabIndex = 29;
             dashboardlbl.Text = "Tournament Dashboard";
             // 
+            // loadexistingtounamentsdropdown
+            // 
+            loadexistingtounamentsdropdown.FormattingEnabled = true;
+            loadexistingtounamentsdropdown.Location = new Point(90, 157);
+            loadexistingtounamentsdropdown.Name = "loadexistingtounamentsdropdown";
+            loadexistingtounamentsdropdown.Size = new Size(318, 38);
+            loadexistingtounamentsdropdown.TabIndex = 34;
+            // 
             // TournamentDashboardForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(521, 430);
+            Controls.Add(loadexistingtounamentsdropdown);
             Controls.Add(createtournamentbtn);
             Controls.Add(loadtournamentbtn);
-            Controls.Add(loadexistingtournamentdropdown);
             Controls.Add(loadexistingtournamenlbl);
             Controls.Add(dashboardlbl);
             Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -121,8 +122,8 @@
 
         private Button createtournamentbtn;
         private Button loadtournamentbtn;
-        private TextBox loadexistingtournamentdropdown;
         private Label loadexistingtournamenlbl;
         private Label dashboardlbl;
+        private ComboBox loadexistingtounamentsdropdown;
     }
 }
