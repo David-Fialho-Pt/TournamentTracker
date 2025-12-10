@@ -1,6 +1,6 @@
 ﻿namespace TrackerUi
 {
-    partial class CreatePrizeForm
+    partial class TournamentViewerForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePrizeForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TournamentViewerForm));
             tournamentlabel = new Label();
             Tournamentnamelabel = new Label();
             roundlabel = new Label();
@@ -85,6 +85,7 @@
             rounddropdown.Name = "rounddropdown";
             rounddropdown.Size = new Size(227, 38);
             rounddropdown.TabIndex = 3;
+            rounddropdown.SelectedIndexChanged += rounddropdown_SelectedIndexChanged;
             // 
             // unplayedonlycheckbox
             // 
@@ -108,6 +109,7 @@
             matchuplistbox.Name = "matchuplistbox";
             matchuplistbox.Size = new Size(359, 332);
             matchuplistbox.TabIndex = 5;
+            matchuplistbox.SelectedIndexChanged += matchuplistbox_SelectedIndexChanged;
             // 
             // team1label
             // 
@@ -195,7 +197,7 @@
             scorebutton.Text = "Score";
             scorebutton.UseVisualStyleBackColor = true;
             // 
-            // CreatePrizeForm
+            // TournamentViewerForm
             // 
             AutoScaleDimensions = new SizeF(11F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -218,7 +220,7 @@
             Font = new Font("Segoe UI Light", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5, 6, 5, 6);
-            Name = "CreatePrizeForm";
+            Name = "TournamentViewerForm";
             Text = "Tournament Viewer";
             ResumeLayout(false);
             PerformLayout();

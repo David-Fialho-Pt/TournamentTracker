@@ -66,6 +66,7 @@
             loadtournamentbtn.TabIndex = 32;
             loadtournamentbtn.Text = "Load Tournament";
             loadtournamentbtn.UseVisualStyleBackColor = true;
+            loadtournamentbtn.Click += loadtournamentbtn_Click;
             // 
             // loadexistingtournamenlbl
             // 

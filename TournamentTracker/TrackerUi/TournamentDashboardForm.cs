@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TournamentTracker;
 using TrackerLibrary.Models;
+using TrackerUi;
 
 namespace TrackerrUi
 {
@@ -30,6 +31,13 @@ namespace TrackerrUi
         private void createtournamentbtn_Click(object sender, EventArgs e)
         {
             CreateTournamentForm frm = new CreateTournamentForm();
+            frm.Show();
+        }
+
+        private void loadtournamentbtn_Click(object sender, EventArgs e)
+        {
+            TournamentModel tm = (TournamentModel)loadexistingtounamentsdropdown.SelectedItem;
+            TournamentViewerForm frm = new TournamentViewerForm(tm);
             frm.Show();
         }
     }
